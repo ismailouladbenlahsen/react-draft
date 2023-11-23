@@ -1,5 +1,13 @@
 import { useState } from "react";
 
+function App() {
+  return (
+    <div>
+      <PickColor />
+    </div>
+  );
+}
+
 function PickColor() {
   const [color, setColor] = useState("");
   return (
@@ -18,4 +26,4 @@ function PickColor() {
   );
 }
 
-export default PickColor;
+export default App;
