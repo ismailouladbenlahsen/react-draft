@@ -3,27 +3,20 @@ import { useState } from "react";
 function App() {
   return (
     <div>
-      <PickColor />
+      <Effect />
     </div>
   );
 }
+const Effect = () => {
+  const [result, setResult] = useState(0);
 
-function PickColor() {
-  const [color, setColor] = useState("");
   return (
-    <div className="container">
-      <h1>
-        My favorite color is{" "}
-        <span style={{ color: `${color}`, backgroundColor: "black" }}>
-          {color}
-        </span>
-      </h1>
+    <div>
+      <h1>the number is {result}</h1>
 
-      <button onClick={() => setColor("white")}>white</button>
-      <button onClick={() => setColor("red")}>red</button>
-      <button onClick={() => setColor("orange")}>orange</button>
+      <button onClick={() => setResult(result + 1)}>+</button>
+      <button onClick={() => setResult(result - 1)}>-</button>
     </div>
   );
-}
-
+};
 export default App;
